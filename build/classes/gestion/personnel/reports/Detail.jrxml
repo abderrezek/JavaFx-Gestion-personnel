@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.13.0.final using JasperReports Library version 6.13.0-46ada4d1be8f3c5985fd0b6146f3ed44caed6f05  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d524369d-91d5-4bd9-83ad-edb78dc68e30">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="nom" class="java.lang.String"/>
+	<parameter name="prenom" class="java.lang.String"/>
+	<parameter name="dateNaissance" class="java.lang.String"/>
+	<parameter name="lieuNaissance" class="java.lang.String"/>
+	<parameter name="wilaya" class="java.lang.String"/>
+	<parameter name="adresse" class="java.lang.String"/>
+	<parameter name="genre" class="java.lang.String"/>
+	<parameter name="numero" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="89" splitType="Stretch">
+			<staticText>
+				<reportElement x="210" y="20" width="160" height="30" uuid="a958f319-a0ae-4482-b3b3-8233cf632c7e">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Détails Employé]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="29" width="30" height="19" uuid="e708496b-839f-4e6e-898d-f5bb6afa2562"/>
+				<text><![CDATA[N°:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="30" width="140" height="20" uuid="0213e85f-f7d2-404e-bf34-7116a422d81d"/>
+				<textFieldExpression><![CDATA[$P{numero}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="10" width="40" height="16" uuid="ddab28f8-6e50-4280-82cb-d325c52b2ac2"/>
+				<text><![CDATA[Nom:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="10" width="50" height="16" uuid="748e4155-56f3-4d6c-a510-8fa8431c76d9"/>
+				<text><![CDATA[Prenom:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="74" y="11" width="150" height="19" uuid="efc03854-ac80-42c3-afc9-6ddea6360686"/>
+				<textFieldExpression><![CDATA[$P{nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="10" width="200" height="20" uuid="59c375f6-011e-44fd-9230-eefa7c140b9c"/>
+				<textFieldExpression><![CDATA[$P{prenom}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="10" width="90" height="16" uuid="5d40ceb7-a369-49ff-8c65-6fcb320bd419"/>
+				<text><![CDATA[Date de naissance:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="10" width="90" height="16" uuid="a4417261-0166-4449-bb26-0354736c3a1a"/>
+				<text><![CDATA[Lieu de naissance:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="10" width="110" height="20" uuid="7fe1bfa5-54d3-4dc6-9a5f-6305094ea3b2"/>
+				<textFieldExpression><![CDATA[$P{dateNaissance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="11" width="180" height="19" uuid="e4b30d42-c0e4-4900-a4b2-e99abf527800"/>
+				<textFieldExpression><![CDATA[$P{lieuNaissance}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="10" width="60" height="16" uuid="56bebd7c-0fbc-4c6f-965b-31500450855b"/>
+				<text><![CDATA[Adresse:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="40" width="60" height="16" uuid="aaa4b11f-66b3-4016-8588-3e5a2e3954f1"/>
+				<text><![CDATA[Wilaya:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="70" width="60" height="16" uuid="08c7c60a-2e48-42d9-a66d-69ba1423ae43"/>
+				<text><![CDATA[Genre:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="40" width="290" height="20" uuid="1693a38e-8896-440a-af74-5e858cbe53ac"/>
+				<textFieldExpression><![CDATA[$P{wilaya}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="10" width="290" height="20" uuid="4d7f008e-653c-4543-ba2f-00459292608e"/>
+				<textFieldExpression><![CDATA[$P{adresse}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="70" width="190" height="20" uuid="6e31dff5-26d1-4b5f-a330-3e8d8c640522"/>
+				<textFieldExpression><![CDATA[$P{genre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

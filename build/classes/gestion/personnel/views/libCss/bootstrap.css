@@ -1,0 +1,87 @@
+/**
+ * Button CSS
+ */
+.btn {
+    -fx-text-fill: #fff;
+    -fx-font-size: 14;
+    -fx-font-weight: 400;
+    -fx-background-radius: 4;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+    -fx-cursor: hand;
+}
+.btn-primary {
+    -fx-background-color: #007bff;
+    -fx-border-color: #007bff;
+}
+.btn-primary:hover {
+    -fx-background-color: #0069d9;
+    -fx-border-color: #0062cc;
+}
+.btn-success {
+    -fx-background-color: #28a745;
+    -fx-border-color: #28a745;
+}
+.btn-success:hover {
+    -fx-background-color: #218838;
+    -fx-border-color: #1e7e34;
+}
+.btn-danger {
+    -fx-background-color: #dc3545;
+    -fx-border-color: #dc3545;
+}
+.btn-danger:hover {
+    -fx-background-color: #c82333;
+    -fx-border-color: #bd2130;
+}
+.btn-secondary {
+    -fx-background-color: #6c757d;
+    -fx-border-color: #6c757d;    
+}
+.btn-secondary:hover {
+    -fx-background-color: #5a6268;
+    -fx-border-color: #545b62;    
+}
+.btn-dark {
+    -fx-background-color: #343a40;
+    -fx-border-color: #343a40;    
+}
+.btn-dark:hover {
+    -fx-background-color: #23272b;
+    -fx-border-color: #1d2124;    
+}
+
+/**
+ * TextField CSS
+ */
+.form-control {
+    -fx-font-weight: 400;
+    -fx-font-size: 16;
+    -fx-text-fill: #495057;
+    -fx-background-color: #fff;
+    -fx-border-color: #ced4da;
+    -fx-background-radius: 0;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-insets: 0;
+}
+.form-control:focused {
+    -fx-border-color: #80bdff;
+    -fx-border-radius: 4;
+    -fx-effect: dropshadow(gaussian , rgba(0,123,255,.25), 2, 3, 0, 0);
+}
+.is-invalid {
+    -fx-border-color: #dc3545;
+    -fx-effect: dropshadow(gaussian , rgba(220,53,69,.25), 2, 3, 0, 0);    
+}
+
+/**
+ * Border CSS
+ */
+.border {
+    -fx-border-width: 5;
+    -fx-border-style: solid;
+}
+.border-secondary {
+    -fx-border-color: #6c757d;
+}

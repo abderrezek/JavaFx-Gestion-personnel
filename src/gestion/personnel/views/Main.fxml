@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="862.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion.personnel.controllers.MainController">
+    <stylesheets>
+        <URL value="@main.css" />
+    </stylesheets>
+   <children>
+      <BorderPane prefHeight="587.0" prefWidth="862.0">
+         <center>
+            <Pane prefHeight="439.0" prefWidth="862.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="table" disable="true" layoutX="14.0" layoutY="6.0" prefHeight="468.0" prefWidth="832.0">
+                     <columns>
+                        <TableColumn fx:id="tcId" editable="false" prefWidth="75.0" text="Id" visible="false" />
+                        <TableColumn fx:id="tcSelect" prefWidth="77.0" text="Sélectionner" visible="false" />
+                        <TableColumn fx:id="tcNom" editable="false" prefWidth="87.0" text="Nom" />
+                        <TableColumn fx:id="tcPrenom" editable="false" prefWidth="86.0" text="Prenom" />
+                        <TableColumn fx:id="tcDateNaissance" editable="false" prefWidth="97.0" text="Date naissance" />
+                        <TableColumn fx:id="tcAge" editable="false" prefWidth="44.0" text="Âge" />
+                        <TableColumn fx:id="tcLieuNaissance" editable="false" prefWidth="99.0" text="Lieu naissance" />
+                        <TableColumn fx:id="tcAdresse" editable="false" prefWidth="68.0" text="Adresse" />
+                        <TableColumn fx:id="tcWilaya" editable="false" prefWidth="62.0" text="Wilaya" />
+                        <TableColumn fx:id="tcGenre" editable="false" prefWidth="87.0" text="Genre" />
+                        <TableColumn fx:id="tcActions" editable="false" prefWidth="150.0" text="Actions" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btnImport" disable="true" layoutX="671.0" layoutY="484.0" mnemonicParsing="false" onAction="#btnImportClick" prefHeight="25.0" prefWidth="85.0" text="Importer" />
+                  <Button fx:id="btnExport" disable="true" layoutX="762.0" layoutY="484.0" mnemonicParsing="false" onAction="#btnExportClick" prefHeight="25.0" prefWidth="85.0" text="Exporter" />
+                  <Button fx:id="btnFirst" disable="true" layoutX="209.0" layoutY="484.0" mnemonicParsing="false" onAction="#btnFirstClick" prefHeight="25.0" prefWidth="46.0" text="|&lt;" textAlignment="CENTER" />
+                  <Button fx:id="btnPrevious" disable="true" layoutX="261.0" layoutY="484.0" mnemonicParsing="false" onAction="#btnPreviousClick" prefHeight="25.0" prefWidth="46.0" text="&lt;" textAlignment="CENTER" />
+                  <Button fx:id="btnNext" disable="true" layoutX="395.0" layoutY="484.0" mnemonicParsing="false" onAction="#btnNextClick" prefHeight="25.0" prefWidth="46.0" text="&gt;" textAlignment="CENTER" />
+                  <Button fx:id="btnLast" disable="true" layoutX="447.0" layoutY="484.0" mnemonicParsing="false" onAction="#btnLastClick" prefHeight="25.0" prefWidth="46.0" text="&gt;|" textAlignment="CENTER" />
+                  <ComboBox fx:id="pgSize" disable="true" layoutX="14.0" layoutY="484.0" onAction="#ComboBoxAction" prefHeight="25.0" prefWidth="63.0" />
+                  <Spinner fx:id="numeroPage" disable="true" editable="true" layoutX="312.0" layoutY="484.0" prefHeight="25.0" prefWidth="76.0" />
+                  <Button fx:id="btnPrintAll" disable="true" layoutX="581.0" layoutY="484.0" mnemonicParsing="false" onAction="#btnPrintAllClick" prefHeight="25.0" prefWidth="85.0" text="Imprimer tous" />
+               </children>
+            </Pane>
+         </center>
+         <top>
+            <Pane prefHeight="51.0" prefWidth="862.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnAdd" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnAddClick" prefHeight="30.0" prefWidth="85.0" text="Ajouter">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-primary" />
+                     </styleClass></Button>
+                  <Button fx:id="btnDeleteMultiple" layoutX="363.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnDeleteMultipleClick" prefHeight="25.0" prefWidth="123.0" text="Supprimer plusieurs" visible="false">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-danger" />
+                     </styleClass></Button>
+                  <TextField fx:id="txtSearch" disable="true" layoutX="668.0" layoutY="13.0" prefHeight="25.0" prefWidth="180.0" />
+                  <Button fx:id="btnDeleteAll" disable="true" layoutX="104.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnDeleteAllClick" prefHeight="25.0" prefWidth="123.0" text="Supprimer tous">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-danger" />
+                     </styleClass></Button>
+                  <Button fx:id="btnSelect" disable="true" layoutX="234.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnSelectClick" prefHeight="25.0" prefWidth="123.0" text="Sélectionner">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-secondary" />
+                     </styleClass></Button>
+               </children>
+               <stylesheets>
+                  <URL value="@main.css" />
+                  <URL value="@libCss/bootstrap.css" />
+                  <URL value="@libCss/jfx-table-view.css" />
+               </stylesheets>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
